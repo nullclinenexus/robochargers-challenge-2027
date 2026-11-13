@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Project brief, target dates, scoring and example runs for Columbia State Community College’s first annual RoboChargers competition.">
+<title>First Annual RoboChargers Competition | Columbia State</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<button type="button" class="skip" id="skip-content">Skip to content</button>
+<header class="top" id="top"><div class="wrap bar">
+<a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 32 32" width="27" height="27"><path d="M6 26V6h20v20H12V12h8v8h-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/><path d="M24 4h4v4h-4z" fill="#46e778"/></svg></span><span><strong>RoboChargers</strong><small>Columbia State Community College</small></span></a>
+<nav aria-label="Page sections"><a href="#challenge">Challenge</a><a href="#teams">Teams</a><a href="#markers">Markers</a><a href="#practice">Practice</a><a href="#schedule">Dates</a><a href="#run-rules">Rules</a><a href="#scoring">Scoring</a><a href="#prizes">Prizes</a><a href="#videos">Videos</a><a href="#getting-started">Get started</a></nav><a class="guide-link" href="student-guide/index.html">Student guide <span aria-hidden="true">→</span></a>
+</div></header>
+<main id="main" tabindex="-1">
+<section class="wrap hero" aria-labelledby="title">
+<div><p class="tag"><i></i> Student robotics · Spring 2027</p>
+<h1 id="title"><span class="edition">First Annual</span> RoboChargers <span class="last">Competition</span></h1>
+<p class="lede">Design, build, and program a laser pointer turret to solve a projected maze your team has never seen before.</p>
+<div class="actions"><a class="button" href="#schedule">See target dates <span aria-hidden="true">↓</span></a><a class="button outline" href="#videos">Watch the demos <span aria-hidden="true">▶</span></a></div>
+</div>
+<figure class="hero-figure"><div class="figure-top"><span>Competition field</span><span>Laser maze</span></div><img src="media/maze-illustration.svg" alt="Illustrated laser path clipping an inside wall while cutting a corner; the crossing is circled." width="618" height="438"><figcaption><span><i></i> Illustrative laser path</span><span>Circled: wall crossing</span></figcaption></figure>
+</section>
+<section id="guide" class="guide-band" aria-labelledby="guide-title"><div class="wrap">
+<div class="guide-head">
+<div><p class="tag"><i></i> Student guide · Six pages</p>
+<h2 id="guide-title">Start with the student guide.</h2></div>
+<div class="guide-intro"><p>Hints, worked examples and questions for building your turret and reading the maze. It explains the ideas and leaves the design to your team.</p>
+<a class="button guide-cta" href="student-guide/index.html">Open the student guide <span aria-hidden="true">→</span></a></div>
+</div>
+<ol class="guide-pages">
+<li><a href="student-guide/index.html#start-here"><span class="n" aria-hidden="true">1</span><strong>Start here</strong><span>Plan the turret before you draw it</span></a></li>
+<li><a href="student-guide/index.html#maze-solver"><span class="n" aria-hidden="true">2</span><strong>Maze solver</strong><span>From a photo to data you can search</span></a></li>
+<li><a href="student-guide/index.html#onshape"><span class="n" aria-hidden="true">3</span><strong>Onshape</strong><span>Drawing parts you can print</span></a></li>
+<li><a href="student-guide/index.html#gears"><span class="n" aria-hidden="true">4</span><strong>Gears</strong><span>Trading range for precision</span></a></li>
+<li><a href="student-guide/index.html#orcaslicer"><span class="n" aria-hidden="true">5</span><strong>OrcaSlicer</strong><span>Turning a model into a good print</span></a></li>
+<li><a href="student-guide/index.html#arduino"><span class="n" aria-hidden="true">6</span><strong>Arduino and servos</strong><span>Making a servo go where you say</span></a></li>
+</ol>
+</div></section>
+<section id="challenge" class="wrap band challenge-band">
+<div class="section-heading">
+<p class="tag">The challenge</p><h2>Build a turret that can solve a maze.</h2>
+<p>Your team will get a projected maze it has never seen before. In Phase 1, photograph it and find a route from Start to Finish. In Phase 2, put that workflow to work on a new maze: use the turret’s two servos to steer the laser spot through the corridors without touching the walls.</p>
+<p>Think of the challenge as two problems: finding a route in a camera image, then converting points on that route into servo positions. The arena scores the spot’s movement; checkpoints are hidden during the run. A wall contact costs points, but the run continues.</p>
+</div>
+<div class="kit"><h3>What your team receives</h3><ul><li>Two servos and a power supply</li><li>An Arduino</li><li>A standard set of bearings</li><li>A laser pointer</li><li>A Logitech webcam</li></ul><p>Design and 3D print the remaining structural parts of your turret. The mechanical layout is up to your team.</p></div>
+<div class="starter">
+<h3>Tips for getting started</h3>
+<ul class="starter-grid">
+<li><strong>Read the image.</strong> <a target="_blank" rel="noopener noreferrer" href="https://docs.opencv.org/4.12.0/d5/dae/tutorial_aruco_detection.html">OpenCV</a> is a useful starting point for working with camera images and detecting ArUco markers.</li>
+<li><strong>Plan a route.</strong> Think about how your program will tell which parts of the maze the laser can travel through.</li>
+<li><strong>Test your aim.</strong> Check whether your turret can reach a few known points before trying a full run.</li>
+</ul>
+</div>
+</section>
+<section id="teams" class="wrap band" aria-labelledby="teams-title">
+<div class="section-heading"><h2 id="teams-title">Teams</h2><p>Form a team of <strong>2–3 students</strong>. Every team member must be a Columbia State Community College student. <strong>AI tools are allowed</strong>, but every teammate must actively contribute to designing or building the project.</p></div>
+<svg class="team-icon" aria-hidden="true" focusable="false" viewBox="0 0 112 112" width="164" height="164">
+ <rect x="1" y="1" width="110" height="110" rx="25" fill="#fff" stroke="#dbe5de" stroke-width="2"/>
+ <g fill="none" stroke="var(--hunter)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="33" cy="44" r="7"/><circle cx="79" cy="44" r="7"/>
+  <path d="M20 69v-3a13 13 0 0 1 20-11m52 14v-3a13 13 0 0 0-20-11"/>
+ </g>
+ <g fill="none" stroke="var(--navy)" stroke-width="3.5" stroke-linecap="round">
+  <circle cx="56" cy="40" r="9"/><path d="M38 76v-3a18 18 0 0 1 36 0v3"/>
+ </g>
+ <circle cx="56" cy="87" r="3" fill="var(--kelly)"/>
+</svg>
+</section>
+<section id="markers" class="marker-section"><div class="wrap">
+<div class="section-heading"><p class="tag">Camera reference</p><h2>Read the ArUco markers.</h2><p>ArUco markers are black-and-white tags with numeric IDs. The three outside tags show where the maze sits in the camera image. Two tags inside the maze identify Start and Finish, even when those cells move between layouts.</p></div>
+<div class="marker-grid">
+<figure class="marker-figure"><img src="media/aruco-layout.svg" alt="Example projected maze with ID 0 outside the upper left, ID 1 outside the upper right, ID 2 outside the lower right, Start ID 17 in a top-edge cell and Finish ID 8 in a bottom-edge cell." width="1000" height="616"><figcaption>Example placement. The outside reference tags stay in the same relative locations; Start and Finish vary.</figcaption></figure>
+<div class="table-wrap"><table><caption>OpenCV dictionary: <code>DICT_4X4_50</code></caption><thead><tr><th scope="col">Marker ID</th><th scope="col">What it identifies</th></tr></thead><tbody>
+<tr><th scope="row">0</th><td>Outside the upper-left corner</td></tr>
+<tr><th scope="row">1</th><td>Outside the upper-right corner</td></tr>
+<tr><th scope="row">2</th><td>Outside the lower-right corner</td></tr>
+<tr><th scope="row">17</th><td>Start cell</td></tr>
+<tr><th scope="row">8</th><td>Finish cell</td></tr>
+</tbody></table></div>
+</div>
+<p class="marker-tip"><strong>Calibration hint:</strong> Keep the full maze and its markers in the camera frame. Use the outside tags as fixed reference points before looking for Start and Finish.</p>
+</div></section>
+<section id="practice" class="practice-section"><div class="wrap">
+<div class="section-heading"><p class="tag">Practice maps</p><h2>Generate an example maze.</h2><p>Use a practice map to test your camera, maze solver, or turret. The map includes the same ArUco markers as the arena.</p></div>
+<form id="practice-controls" class="practice-controls"><label for="practice-size">Difficulty</label><select id="practice-size"><option value="easy">Easy · Wide corridors</option><option value="standard">Standard</option><option value="hard">Hard · Narrow corridors</option></select><button class="button" type="submit">Generate map</button><button class="button outline" type="button" id="practice-fullscreen">Full screen</button><button class="button outline" type="button" id="practice-download">Download PNG</button><span class="practice-code"><label for="practice-code">Map code</label><input id="practice-code" type="text" autocomplete="off" spellcheck="false" maxlength="12" size="9" aria-describedby="practice-code-help"><button class="button outline" type="button" id="practice-load">Load code</button></span></form>
+<p class="practice-help" id="practice-code-help">To bring back a maze, choose its difficulty, type its map code and press Load code. The same difficulty and code always give the same maze.</p>
+<p class="practice-meta" id="practice-meta" role="status"></p>
+<div class="practice-board" id="practice-board"><svg id="practice-svg" role="img" aria-label="Practice maze with ArUco reference tags and labeled Start and Finish"></svg><button class="practice-exit" type="button" id="practice-exit">Exit full screen</button></div>
+<noscript><p>Enable JavaScript to generate practice maps.</p></noscript>
+</div></section>
+<section id="schedule" class="schedule"><div class="wrap">
+<div class="section-heading"><p class="tag">Schedule</p><h2>Two phases, two Fridays.</h2><p>These are target dates and may change.</p><p><strong>Competition location:</strong> FIS, Williamson Campus.</p><p class="schedule-food"><strong>Complimentary pizza and snacks will be provided on both challenge dates.</strong></p></div>
+<div class="cards">
+<article class="phase"><div class="date"><span>FEB</span><strong>19</strong><small>2027</small></div><div><p class="tag">Phase 1 · Friday, February 19, 2027</p><h3>Take a picture and solve a maze</h3><p>Photograph the projected maze and find a valid path from Start to Finish. <strong>Phase 1 is not strictly timed.</strong> A correct solution earns <strong>+100 points</strong>.</p></div></article>
+<article class="phase"><div class="date"><span>MAR</span><strong>19</strong><small>2027</small></div><div><p class="tag">Phase 2 · Friday, March 19, 2027</p><h3>Compete in the maze solving challenge</h3><p>Each team has up to <strong>5 minutes</strong> to calibrate on a sample maze. When the countdown ends and the challenge maze is revealed, start your program with a single button press. Your software must then solve the maze and guide the laser automatically. Runs are scored on checkpoints, completion, time, and wall contacts.</p></div></article>
+</div>
+</div></section>
+<section id="run-rules" class="wrap band run-rules" aria-labelledby="run-rules-title">
+<div class="section-heading">
+<h2 id="run-rules-title">Phase 2 - Laser Maze Arena: Processing and Run Rules</h2>
+<img class="processing-art" src="media/processing-art.svg" width="448" height="212" alt="">
+</div>
+<div class="run-rules-copy">
+<p>Teams process camera images and plan routes on a local laptop, with an Arduino used solely to control the servos and switch the laser. The camera connects directly to that laptop. All competition processing must run on the team’s on-site equipment; cloud processing and remote assistance are not permitted during the challenge.</p>
+<p>In Phase 2, each team is allowed up to <strong>5 minutes</strong> to set up and calibrate its equipment using a sample maze.</p>
+<p>When the countdown ends and the challenge maze is revealed, each team must start its maze-solving program with a <strong>single button press</strong>. The software must then find the route and steer the laser automatically. Team members may not draw the route, enter waypoints, or steer the turret by hand. AI tools are allowed during development, and each teammate must actively contribute to designing or building the project.</p>
+<p><strong>Build it to come apart.</strong> Your turret should be capable of being disassembled, so the servos and Arduino can be recovered for future projects.</p>
+</div>
+</section>
+<section id="scoring" class="wrap band score-band">
+<div class="section-heading"><p class="tag">Scoring</p><h2>How points are earned.</h2><p>Phase 1 awards <strong>+100 points</strong> for a valid solution. The rules here apply to the Phase 2 arena run.</p><div class="example"><strong>Example: 840 points</strong><p>10 checkpoints in order (+500), Finish (+200), 12 seconds (+190), and one wall contact (−50).</p></div></div>
+<div class="table-wrap"><table><caption>Phase 2 arena scoring</caption><thead><tr><th scope="col">Event</th><th scope="col">Points</th><th scope="col">How it works</th></tr></thead><tbody>
+<tr><th scope="row">Hidden checkpoint</th><td>+50 each</td><td>Ten checkpoints along the correct path. Each counts once.</td></tr>
+<tr><th scope="row">Finish</th><td>+200</td><td>Awarded when the laser spot reaches Finish.</td></tr>
+<tr><th scope="row">Time bonus</th><td>Up to +250</td><td>Earned only by crossing all ten checkpoints in order (1–10) on the first visit to each, then reaching Finish. The bonus drops by 5 points per full second, to a minimum of zero.</td></tr>
+<tr><th scope="row">Wall contact</th><td>−50, −100, −200…</td><td>Each new contact doubles the previous penalty, with no cap. A hit does not end the run.</td></tr>
+</tbody></table><p class="score-note">The Phase 2 run score cannot drop below zero.</p></div>
+</section>
+<section id="prizes" class="wrap band" aria-labelledby="prizes-title">
+<div class="section-heading"><h2 id="prizes-title">Prizes</h2><p>Every participant receives a certificate of participation. Feature your RoboChargers project on your résumé or in your portfolio to show what you designed, programmed, or tested.</p></div>
+<div class="kit"><h3>Winning team</h3><p><strong>$300 cash prize for the team</strong>, plus a winner’s certificate for each team member.</p></div>
+</section>
+<section id="videos" class="videos"><div class="wrap">
+<div class="section-heading"><p class="tag">Video demos</p><h2>Watch the turret and the maze run.</h2><p>See the turret concept from every angle, then watch the same simulated maze run live and in replay.</p></div>
+<article class="video-card turret-card"><video controls controlslist="nodownload" playsinline preload="metadata" width="768" height="432" poster="media/turret.webp" aria-label="360-degree view of the two-servo laser turret mockup"><source src="media/turret.mp4" type="video/mp4"></video><div class="video-copy"><p class="tag">3D turret mockup · 6 seconds</p><h3>A full turn around the turret</h3><p>See how two geared servos aim the pointer left and right, and up and down. This mockup illustrates one possible layout for the 3D printed parts.</p></div></article>
+<div class="cards">
+<article class="video-card"><video controls controlslist="nodownload" playsinline preload="metadata" width="960" height="540" poster="media/example-run.webp" aria-label="Example maze run"><source src="media/example-run.mp4" type="video/mp4"></video><div class="video-copy"><p class="tag">Live view · 15 seconds</p><h3>Example maze run</h3><p>Watch the red spot cut a turn too early and cross the inside wall before continuing. During the run, only the current spot is visible; results appear at Finish.</p></div></article>
+<article class="video-card"><video controls controlslist="nodownload" playsinline preload="metadata" width="960" height="540" poster="media/replay.webp" aria-label="Run replay with scoring"><source src="media/replay.mp4" type="video/mp4"></video><div class="video-copy"><p class="tag">Replay · 15 seconds</p><h3>Replay with scoring</h3><p>The replay shows exactly where the laser cut the corner. A ring marks the wall crossing, the score drops by 50 points, and the run continues to Finish.</p></div></article>
+</div>
+</div></section>
+<section id="getting-started" class="wrap band" aria-labelledby="getting-started-title">
+<div class="beginner-copy">
+<div class="section-heading"><h2 id="getting-started-title">New to 3D Printing and Design?</h2><p>Starting from scratch is welcome. Visit <a target="_blank" rel="noopener noreferrer" href="https://columbiastate.edu/innovationlab/index.html">Columbia State’s Innovation Lab</a> on the Williamson campus to explore the space and see what you can make. A first print can be as simple as one bracket for your turret.</p></div>
+<div class="kit"><h3>Train online and build together</h3><ul><li>Sign in to <a target="_blank" rel="noopener noreferrer" href="https://elearn.columbiastate.edu/">Online Campus</a> and find <strong>Innovation Lab Training</strong> under <strong>Discover</strong>. You can enroll yourself and work through the training before using the workroom.</li><li>The <strong>RoboChargers Club</strong> meets in the Innovation Lab on the Williamson Campus. Ask the club about possible build days to hang out, swap ideas, and work on something new together.</li></ul></div>
+</div>
+<figure class="lab-photo">
+ <img src="media/innovation-lab.webp" width="1120" height="747" loading="lazy" decoding="async" alt="Empty Innovation Lab with movable tables, rolling chairs, a large display, and a green screen.">
+ <figcaption>Innovation Lab, Williamson Campus. <a target="_blank" rel="noopener noreferrer" href="https://new.columbiastate.edu/news/details/2024/03/columbia-state-unveils-new-arts-and-technology-building-with-ribbon-cutting-and-open-house.html">Photo: Columbia State Community College</a></figcaption>
+</figure>
+</section>
+</main>
+<footer><div class="wrap footer"><div><strong>RoboChargers Competition</strong><p>Columbia State Community College · Spring 2027</p></div><span class="footer-links"><a href="/">Build library</a><a href="#top">Back to top ↑</a></span></div>
+<div class="wrap footer-note"><p>RoboChargers is a student organization. This competition is a student-faculty initiative and is not officially endorsed by the college.</p></div></footer>
+<script defer src="practice.js"></script>
+</body></html>
