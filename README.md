@@ -9,6 +9,8 @@ A static site with no build step. Everything in `public/` is the site.
 ```
 robochargers-challenge-2027/
   README.md                 this file (not part of the site)
+  functions/
+    _middleware.js          sends direct visitors of the pages.dev address to the library address
   public/
     index.html              competition page (the home page)
     site.css                its styles
@@ -49,8 +51,13 @@ domain, so:
   spell out the full folder: `/robochargers-challenge-2027/…`.
 - **Back to the library:** the footers of the competition page and the student
   guide have a **Build library** link (`href="/"`).
-- Visiting the `*.pages.dev` address directly works too, except the 404 page's
-  links, which assume the library folder.
+- **One public address.** `functions/_middleware.js` sends anyone who opens
+  `robochargers-challenge-2027.pages.dev` directly to the same page at
+  `build.nullclinenexus.com/robochargers-challenge-2027/`, so links and
+  bookmarks always use the library address. The library's router marks its
+  own requests with an `X-NXB-Library` header, and those pass straight
+  through. Preview deployments (`<branch>.robochargers-challenge-2027.pages.dev`)
+  are not redirected, so a branch can still be checked before it goes live.
 
 ## Editing
 
