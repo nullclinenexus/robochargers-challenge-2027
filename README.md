@@ -2,12 +2,12 @@
 
 The competition page and student guide for the RoboChargers laser-maze turret
 competition (Spring 2027). Published in the NullclineNexus build library at
-https://build.nullclinenexus.com/robochargers-2026-27/
+https://build.nullclinenexus.com/robochargers/
 
 A static site with no build step. Everything in `public/` is the site.
 
 ```
-robochargers-2026-27/
+robochargers/
   README.md                 this file (not part of the site)
   public/
     index.html              competition page (the home page)
@@ -25,7 +25,7 @@ robochargers-2026-27/
 
 This repository is its own Cloudflare Pages project, connected to GitHub:
 
-- Project name: `robochargers-2026-27`
+- Project name: `robochargers`
 - Production branch: `main`
 - Framework preset: None
 - Build command: blank
@@ -33,11 +33,11 @@ This repository is its own Cloudflare Pages project, connected to GitHub:
 
 Every push to `main` redeploys it. No custom domain is needed: the build
 library at build.nullclinenexus.com serves this project at
-`/robochargers-2026-27/`. Its entry lives in the `nullclinenexus-web`
+`/robochargers/`. Its entry lives in the `nullclinenexus-web`
 repository, in `build/public/builds.js`, and points at this project's
 `*.pages.dev` address.
 
-## Working under /robochargers-2026-27/
+## Working under /robochargers/
 
 The site is served from a folder of the library, not from the root of a
 domain, so:
@@ -46,7 +46,7 @@ domain, so:
   `student-guide/index.html`, `../index.html`). A link starting with `/` would
   point at the library instead.
 - **`404.html` is the exception.** It can be shown at any depth, so its links
-  spell out the full folder: `/robochargers-2026-27/…`.
+  spell out the full folder: `/robochargers/…`.
 - **Back to the library:** the footers of the competition page and the student
   guide have a **Build library** link (`href="/"`).
 - Visiting the `*.pages.dev` address directly works too, except the 404 page's
